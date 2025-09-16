@@ -2,45 +2,94 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <!-- Редирект через 5 секунд на Telegram -->
-  <meta http-equiv="refresh" content="5;url=https://t.me/ТВОЙ_НИК">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Караван Kids</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      min-height: 100vh;
       text-align: center;
-    }
-    img {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
       color: #333;
     }
-    p {
-      font-size: 18px;
-      color: #555;
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      max-width: 350px;
+      width: 90%;
     }
-    a {
-      color: #0088cc;
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #ff6f61;
+    }
+
+    img {
+      width: 100px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #0088cc;
+      color: white;
       text-decoration: none;
+      border-radius: 10px;
       font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    a.button:hover {
+      background-color: #006699;
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 24px;
+      }
+      img {
+        width: 80px;
+      }
+      a.button {
+        padding: 8px 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Караван Kids</h1>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-  <p>Через 5 секунд вы будете перенаправлены в мой Telegram.</p>
-  <p>Если редирект не сработал — <a href="https://t.me/ТВОЙ_НИК">нажмите сюда</a>.</p>
+  <div class="container">
+    <h1>Караван Kids</h1>
+
+    <!-- Мгновенный переход по клику на картинку -->
+    <a href="https://t.me/ТВОЙ_НИК" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </a>
+
+    <p>Нажмите на картинку, чтобы перейти в Telegram.</p>
+    <p>Или воспользуйтесь кнопкой ниже:</p>
+    <a class="button" href="https://t.me/ТВОЙ_НИК" target="_blank">Перейти в Telegram</a>
+  </div>
 </body>
 </html>
